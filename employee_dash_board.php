@@ -46,7 +46,7 @@ $conn->close();
   <title>Employee Dashboard</title>
   <link rel="stylesheet" href="employee_dash_board.css"/>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="images\employee_dash_board.js"></script>
+  <script src="employee_dash_board.js"></script>
 </head>
 <body>
   <div class="dashboard-container">
