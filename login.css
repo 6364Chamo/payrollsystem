@@ -1,0 +1,91 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  font-family: Arial, sans-serif;
+  background-image:url('images/login3\ image.jpg');
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #045D75;
+  padding: 40px 30px;
+  border-radius: 12px;
+  position: relative;
+  width: 320px;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.icon-circle {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #002B47;
+  padding: 14px;
+  border-radius: 50%;
+}
+
+.icon-circle i {
+  font-size: 32px;
+  color: white;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.login-box i {
+  margin-right: 8px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.login-box button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #333;
+}
+.h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* Smaller size for login header */
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #003f5c; /* Calm dark blue */
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 20px auto -65px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}

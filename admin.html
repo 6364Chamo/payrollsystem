@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css" />
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- jQuery Validation Plugin -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<!-- Your custom JS -->
+<script src="admin.js"></script>
+
+</head>
+<body>
+    <h2>ADMIN PANEL</h2>
+    <div class="container">
+        <div class="panel">
+            <h2>Insert a New User</h2>
+            <form id="formData">
+                <div class="form-group">
+                    <label for="emp_id">EMP_ID:</label>
+                    <input type="text" id="emp_id" name="emp_id" >
+                </div>
+                <div class="form-group">
+                    <label for="emp_password">EMP_PASSWORD:</label>
+                    <input type="text" id="emp_password" name="emp_password" >
+                </div>
+                <div class="form-group">
+                    <label for="emp_name">EMP_NAME:</label>
+                    <input type="text" id="emp_name" name="emp_name" >
+                </div>
+                <div class="form-group">
+                    <label for="emp_address">EMP_ADDRESS:</label>
+                    <input type="text" id="emp_address" name="emp_address" >
+                </div>
+                <div class="form-group">
+                    <label for="emp_contact">EMP_CONTACT_NUMBER:</label>
+                    <input type="text" id="emp_contact" name="emp_contact" >
+                </div>
+                <div id="responsehere"></div>
+                <button type="submit" id="adduser" >Add Employee</button>
+                
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Delete a User</h2>
+            <form id="deleteuser">
+                <div class="form-group">
+                    <label for="delete_emp_id">EMP_ID:</label>
+                    <input type="text" id="delete_emp_id" name="delete_emp_id">
+                </div>
+                <div id="delete-sucess-msg"></div>
+                <button type="submit" id="delete-employee">Delete Employee</button>
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Modify User</h2>
+            <form id="modify_employee">
+                 <div class="form-group">
+                    <label for="modify_emp_id">ENTER EMP_ID:</label>
+                    <input type="text" id="modify_emp_id" name="modify_emp_id">
+                </div>
+                <div class="form-group">
+                    <label for="modify_emp_password">EMP_PASSWORD:</label>
+                    <input type="text" id="modify_emp_password" name="modify_emp_password">
+                </div>
+                <div class="form-group">
+                    <label for="modify_emp_name">EMP_NAME:</label>
+                    <input type="text" id="modify_emp_name" name="modify_emp_name">
+                </div>
+                <div class="form-group">
+                    <label for="modify_emp_address">EMP_ADDRESS:</label>
+                    <input type="text" id="modify_emp_address" name="modify_emp_address">
+                </div>
+                <div class="form-group">
+                    <label for="modify_emp_contact">EMP_CONTACT_NUMBER:</label>
+                    <input type="tel" id="modify_emp_contact" name="modify_emp_contact">
+                </div>
+                 <div id="update-response"></div>
+                <button type="submit" id="modify-employee">Modify Employee</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
