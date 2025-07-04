@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management</title>
+    <link rel="stylesheet" href="payroll.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Payroll Management</h1>
+
+        <div class="form-section">
+            <div class="search-section">
+                <label for="empIdInput">EMP_ID:</label>
+                <input type="text" id="empIdInput" placeholder="Enter Employee ID">
+                <button class="btn">Search</button>
+            </div>
+
+            <div class="employee-details">
+                <h3>Employee Details Here</h3>
+            </div>
+
+            <div class="salary-calc">
+                <label for="payPerHour">Payment per Hour:</label>
+                <input type="text" id="payPerHour" placeholder="Enter pay per hour">
+
+                <label for="workedHours">Worked Number of Hours:</label>
+                <input type="text" id="workedHours" placeholder="Enter worked hours">
+
+                <label>Calculated Salary:</label>
+                <div class="salary-display">Rs. <span id="calculatedSalary">0.00</span></div>
+
+                <button class="btn">Calculate</button>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Insert Calculated ID and Salary</h3>
+
+            <label for="empIdResult">EMP_ID:</label>
+            <input type="text" id="empIdResult" placeholder="Calculated Employee ID">
+
+            <label for="salaryResult">Salary:</label>
+            <input type="text" id="salaryResult" placeholder="Calculated Salary">
+
+            <label for="monthResult">Month:</label>
+            <input type="text" id="monthResult" placeholder="Related Month">
+
+            <button class="btn">Insert to Salary Table</button>
+        </div>
+    </div>
+
+</body>
+</html>
