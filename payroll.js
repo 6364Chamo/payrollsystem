@@ -25,5 +25,10 @@ $(document).ready (function()
 
     })
 
-  })
+  });
+
+  $("#salary-calculate").click(function()
+  {
+
+  });
 });
