@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll Management</title>
     <link rel="stylesheet" href="payroll.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="payroll.js"></script>
 </head>
+
 <body>
 
     <div class="container">
@@ -15,13 +19,28 @@
             <div class="search-section">
                 <label for="empIdInput">EMP_ID:</label>
                 <input type="text" id="empIdInput" placeholder="Enter Employee ID">
-                <button class="btn">Search</button>
+                <button id="search-btn" >Search</button>
             </div>
 
-            <div class="employee-details">
-                <h3>Employee Details Here</h3>
+            <!-- Employee Details Section -->
+            <div class="employee-details" id="employeeDetails" style="height:300px; display:none">
+                <!-- This will be shown by default until the data is displayed -->
+                <h2 id="errormsg" style="display: none;">error fethcing data</h2>
+
+                <!-- Hidden employee details -->
+                <div id="empDetailsContent" style="display: none; width: 50%; ">
+                    <label for="show-emp-name">EMP_NAME:</label>
+                    <input type="text" id="show-emp-name" readonly><br>
+
+                    <label for="show-emp-contact">EMP_CONTACT_NUMBER:</label>
+                    <input type="text" id="show-emp-contact" readonly><br>
+
+                    <label for="show-emp-month">Month:</label>
+                    <input type="text" id="show-emp-month" readonly>
+                </div>
             </div>
 
+            <!-- Salary Calculation Section -->
             <div class="salary-calc">
                 <label for="payPerHour">Payment per Hour:</label>
                 <input type="text" id="payPerHour" placeholder="Enter pay per hour">
@@ -29,8 +48,8 @@
                 <label for="workedHours">Worked Number of Hours:</label>
                 <input type="text" id="workedHours" placeholder="Enter worked hours">
 
-                <label>Calculated Salary:</label>
-                <div class="salary-display">Rs. <span id="calculatedSalary">0.00</span></div>
+                <label for="calculated-salary">Calculated Salary:</label>
+                <input type="text" id="calculated-salary" readonly>
 
                 <button class="btn">Calculate</button>
             </div>
@@ -51,6 +70,6 @@
             <button class="btn">Insert to Salary Table</button>
         </div>
     </div>
-
 </body>
+
 </html>
