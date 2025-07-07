@@ -15,6 +15,7 @@
 
     <div class="container">
         <h1>Payroll Management</h1>
+        <button type="button" id="login_page" style="width: 65px; height: 35px; background-color: blue; color: white; border: none;">Home</button>
 
         <div class="form-section">
             <div class="search-section">
@@ -24,7 +25,7 @@
             </div>
 
             <!-- Employee Details Section -->
-            <div class="employee-details" id="employeeDetails" style="height:300px; display:none">
+            <div class="employee-details" id="employeeDetails" style="height:450px; display:none">
                 <!-- This will be shown by default until the data is displayed -->
                 <h2 id="errormsg" style="display: none;">error fethcing data</h2>
 
@@ -38,6 +39,9 @@
 
                     <label for="show-emp-month">Month:</label>
                     <input type="text" id="show-emp-month" readonly>
+
+                    <label for="show-emp-inquary">inquary:</label>
+                    <input type="text" id="show-emp-inquary" readonly>
                 </div>
             </div>
 

@@ -11,6 +11,7 @@ $(document).ready (function()
             $('#show-emp-name').val(data.showEmpName);
             $('#show-emp-contact').val(data.showEmpContact);
             $('#show-emp-month').val(data.showEmpMonth);
+            $('#show-emp-inquary').val(data.showEmpInquary)
             $('#errormsg').html('<p>Erro fetching data!</p>').hide();
 
         } else {
@@ -119,5 +120,9 @@ $("#easy-valiadation").validate({
     }
 });
 
+//go to login page
+$("#login_page").click(function() {
+    window.location.href = "login.html";
+});
 
 });

@@ -6,10 +6,10 @@ if ($conn->connect_error) {
 }
   // getting deleting id
   if(isset($_POST['delete_emp_id']) ) {
-    //Data ගන්න
+    //Data getting
     $empId = $_POST['delete_emp_id'];
 
-    // SQL query එක
+    // SQL query 
  $sql = "DELETE FROM employee_details WHERE emp_id = '$empId' "; //here error was reason is empid is a string value
 
 if ($conn->query($sql) === TRUE) {

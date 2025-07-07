@@ -5,21 +5,17 @@ if ($conn->connect_error) {
     echo "database connection error";
 }
 
-  // Form data ලබාගන්න
+  // getting Form data 
   if(isset($_POST['modify_emp_id']) && isset($_POST['modify_emp_password']) && isset($_POST['modify_emp_name']) &&
    isset($_POST['modify_emp_address']) && isset($_POST['modify_emp_contact'])) {
-    //Data ගන්න
+    //holding data
     $empId = $_POST['modify_emp_id'];
     $empPassword = $_POST['modify_emp_password'];
     $empName = $_POST['modify_emp_name'];
     $empAddress = $_POST['modify_emp_address'];
     $empContact = $_POST['modify_emp_contact'];
   
-   
-
-
-
-    // SQL query එක
+    // SQL query 
     $sql = "UPDATE  employee_details SET password='$empPassword',EMP_NAME='$empName',EMP_ADDRESS='$empAddress',EMP_CONTACT_NUMBER='$empContact'
     WHERE emp_id='$empId' ";
 

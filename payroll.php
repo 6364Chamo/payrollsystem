@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 }
 
  // data retrived quary
-    $dataRetriveQuary= "SELECT EMP_NAME,EMP_CONTACT_NUMBER,month from employee_details WHERE emp_id='$empIdInputByUser'";
+    $dataRetriveQuary= "SELECT EMP_NAME,EMP_CONTACT_NUMBER,month,inquary from employee_details WHERE emp_id='$empIdInputByUser'";
     $result = $conn->query($dataRetriveQuary);
 
     if ($result->num_rows > 0) {
@@ -27,12 +27,14 @@ if ($conn->connect_error) {
     $showEmpName = $row["EMP_NAME"];
     $showEmpContact = $row["EMP_CONTACT_NUMBER"];
     $showEmpMonth= $row["month"];
+    $showEmpInquary=$row["inquary"];
     //send data json format to frontend this is the method there is no other method send to frond end retrive data
     echo json_encode([
     'showEmpName' => $showEmpName,
     'message' =>'Data successfully retrieved!',
     'showEmpContact' => $showEmpContact,
-    'showEmpMonth' => $showEmpMonth
+    'showEmpMonth' => $showEmpMonth,
+    'showEmpInquary'=>$showEmpInquary
     ]);
    
 

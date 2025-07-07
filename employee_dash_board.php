@@ -21,7 +21,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Always fetch fresh data for the current user
+// Always fetch fresh data for the current user(i hada to write in a php file for getting fresh data)
 $sql = "SELECT EMP_NAME, EMP_CONTACT_NUMBER, month, salary FROM employee_details WHERE emp_id='$empId'";
 $result = $conn->query($sql);
 
@@ -51,6 +51,7 @@ $conn->close();
 <body>
   <div class="dashboard-container">
     <h1>Employee Dashboard</h1>
+    <button type="button" id="login_page" style="width: 65px; height: 35px; background-color: blue; color: white; border: none;">Home</button>
     <div class="employee-panel">
       <h2>Employee Panel</h2>
       

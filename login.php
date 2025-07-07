@@ -60,7 +60,7 @@ if ($result->num_rows > 0) {
         if ($loginSuccess) {
             echo "success"; 
             $_SESSION["emp_id"]="$userName";
-            exit(); // script execution stop කරන්න
+            exit(); // script execution stop 
         } 
 
         

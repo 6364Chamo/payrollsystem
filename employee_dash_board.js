@@ -17,5 +17,11 @@ $(document).ready (function()
     }, 5000);
     })
 
-  })
+  });
+
+//go to login page
+$("#login_page").click(function() {
+    window.location.href = "login.html";
+});
+
 });

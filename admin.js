@@ -174,4 +174,9 @@ var modifyuser = $("#modify_employee").serialize();
    
 });
 
+//go to login page
+$("#login_page").click(function() {
+    window.location.href = "login.html";
+});
+
 });
