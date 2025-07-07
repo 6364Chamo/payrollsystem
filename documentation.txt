@@ -1,4 +1,0 @@
-table name=employee_login_details
-column names=id,user_name,password(id auto increment primarykey,varchar,varchar)
-html elements name=username,usernamepassword
-more thing have to uplad

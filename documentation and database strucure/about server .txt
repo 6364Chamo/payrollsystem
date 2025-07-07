@@ -1,0 +1,3 @@
+table name=employee_login_details
+servername=xampp
+
