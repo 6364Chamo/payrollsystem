@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll Management</title>
     <link rel="stylesheet" href="payroll.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="payroll.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script> 
+    <script src="payroll.js" ></script>
 </head>
 
 <body>
@@ -51,23 +52,26 @@
                 <label for="calculated-salary">Calculated Salary:</label>
                 <input type="text" id="calculated-salary" readonly>
 
-                <button class="salary-calculate">Calculate</button>
+                <button id="salary-calculate">Calculate</button>
             </div>
         </div>
 
         <div class="form-section">
+            <form id="easy-valiadation">
             <h3>Insert Calculated ID and Salary</h3>
 
-            <label for="empIdResult">EMP_ID:</label>
-            <input type="text" id="empIdResult" placeholder="Calculated Employee ID">
+            <label for="empId-result">EMP_ID:</label>
+            <input type="text" id="empId_result" name="empId_result" placeholder="Calculated Employee ID" >
 
-            <label for="salaryResult">Salary:</label>
-            <input type="text" id="salaryResult" placeholder="Calculated Salary">
+            <label for="salary-result">Salary:</label>
+            <input type="text" id="salary_result"  name="salary_result" placeholder="Calculated Salary">
 
-            <label for="monthResult">Month:</label>
-            <input type="text" id="monthResult" placeholder="Related Month">
-
-            <button class="btn">Insert to Salary Table</button>
+            <label for="month-result">Month:</label>
+            <input type="month" id="month_result" name="month_result" placeholder="Related Month"><br/>
+            <div id="insertion-result"></div>
+            <button type="button" id="clear-button">clear form</button><br/><br/>
+           <button type="submit" id="insert-calculated-salary">Insert to Salary Table</button>
+            </form>
         </div>
     </div>
 </body>

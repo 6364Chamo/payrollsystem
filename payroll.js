@@ -14,7 +14,7 @@ $(document).ready (function()
             $('#errormsg').html('<p>Erro fetching data!</p>').hide();
 
         } else {
-            console.log("this part is working");
+
             $('#employeeDetails').show();
             $('#empDetailsContent').hide();
             $('#errormsg').html('<p>Error fetching data!</p>').show();
@@ -26,9 +26,98 @@ $(document).ready (function()
     })
 
   });
-
+  
+  //for salry calculation
   $("#salary-calculate").click(function()
   {
+    var payPerHour=$("#payPerHour").val();
+    var workedHours=$("#workedHours").val();
+    var salryOfAEmployee=payPerHour*workedHours;
+    $('#calculated-salary').val('Rs.'+salryOfAEmployee);
 
   });
+
+  //for data insertion (without validation)
+  /*
+  $("#insert-calculated-salary").click(function(){
+    var empIdResult=$("#empId_result").val();
+    var salaryResult=$("#salary_result").val();
+    var monthResult=$("#month_result").val();
+ 
+    
+    $.post("salary-insertion.php",{empIdResult:empIdResult,salaryResult:salaryResult,monthResult:monthResult},function(data,status)
+
+     {
+        if (data.trim() === "Salary insert succesfully." && status === "success") 
+            {
+                
+               $("#insertion-result").html('<span style="color: green;">Salary Inserted!</span>');
+
+              
+            }
+        else
+        {
+            $("#insertion-result").html('<span style="color: red;">Fail to  Insert!</span>');
+        }
+
+     });
+
+
+  });
+*/
+           // for clearing the form
+$("#clear-button").click(function()
+ {
+        $("#insertion-result").html('');
+        $("#empId_result").val('');
+        $("#salary_result").val('');
+        $("#month_result").val(''); 
+ });
+
+ // Validation for the form
+$("#easy-valiadation").validate({
+    rules: {
+        empId_result: {
+            required: true,
+            minlength: 5
+        },
+        salary_result: {
+            required: true,
+            minlength: 5
+        },
+        month_result: {
+            required: true,
+            minlength: 5
+        }
+    },
+    messages: {
+        empId_result: {
+            required: "emp-id is must.",
+            minlength: "minimum 5 character (ex: emp12)"
+        },
+        salary_result: {
+            required: "Please enter salary Amount",
+            minlength: "minimum 5 character (greater than rs.12000)"
+        },
+        month_result: {
+            required: "Please select the month",
+            minlength: "minimum 5 characters required"
+        }
+    },
+    submitHandler: function (form) { // when form is valid
+        var empIdResult = $("#empId_result").val();
+        var salaryResult = $("#salary_result").val();
+        var monthResult = $("#month_result").val();
+
+        $.post("salary-insertion.php", { empIdResult: empIdResult, salaryResult: salaryResult, monthResult: monthResult }, function (data, status) {
+            if (data.trim() === "Salary insert succesfully." && status === "success") {
+                $("#insertion-result").html('<span style="color: green;">Salary Inserted!</span>');
+            } else {
+                $("#insertion-result").html('<span style="color: red;">Fail to Insert!</span>');
+            }
+        });
+    }
+});
+
+
 });
